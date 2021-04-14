@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>tag와 자바스크립트</title>
+</head>
+<body>
+
+	<ol>
+		<li>ol item 1</li>
+		<li>ol item 2</li>
+		<li>ol item 3</li>
+		<li>ol item 4</li>
+		<li>ol item 5</li>
+	</ol>
+	<input type="button" value="버튼" onclick="process1()">
+		<ul>
+		<li>ul item 1</li>
+		<li>ul item 2</li>
+		<li>ul item 3</li>
+		<li>ul item 4</li>
+		<li>ul item 5</li>
+	</ul>
+	<ul>
+		<li>ul item 6</li>
+		<li>ul item 7</li>
+		<li>ul item 8</li>
+		<li>ul item 9</li>
+		<li>ul item 10</li>
+	</ul>
+	<input type="button" value="버튼" onclick="process2()">
+	
+	<script>
+	
+		function process1() {
+			
+			var ol = document.getElementsByTagName("ol");
+			console.log(ol);							// 컬렉션
+			console.log("========================");
+			console.log(ol[0]);							// 배열
+			console.log("========================");
+			console.log(ol[0].getElementsByTagName("li"));			// li의 컬렉션 접근
+			console.log("========================");
+			console.log(ol[0].getElementsByTagName("li").length);	// li의 개수
+			
+			var li = ol[0].getElementsByTagName("li");
+			for (var i = 0; i < li.length; i++) {
+				li[i].innerHTML = "수정된 데이터";
+			}
+			
+		}
+		
+		
+		function process2() {
+			
+			var ul = document.getElementsByTagName("ul");
+			console.log(ul);							
+			console.log(ul[0]);							
+			console.log(ul[1]);							
+			
+			for (var i = 0; i < ul.length; i++) {
+				var li = ul[i].getElementsByTagName("li")	
+				for (var j = 0; j < li.length; j++) {
+					console.log(li[j].innerHTML)
+				}
+				console.log("========================");
+				
+			}
+
+		}
+		
+	</script>
+
+
+
+</body>
+</html>

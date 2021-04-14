@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body id="target">
+
+	<img id="image" src="../images/pome.png"	width="120" height="100" alt="강아지사진">
+	<input type="button" onclick="changeImage()" value ='눌러보세요'>
+	<br>
+
+	<input type="radio" name="C1" onclick="changeColor('lightblue')">파랑
+	<input type="radio" name="C1" onclick="changeColor('lightgreen')">녹색
+	<hr/>
+	
+	<button onclick="changeColors()">배경색상 변경</button>
+	<hr/>
+
+	<div>
+		<img src="../images/pic_1.jpg" width="200" height="200" id="photo" alt = "기호">
+		<p>
+			<button onclick="changeImages(0)">이전</button>
+			<button onclick="changeImages(1)">다음</button>
+			
+		
+		</p>
+		
+	</div>
+
+
+	<script>
+	
+		function changeImage() {
+			
+			document.getElementById("image").src = "../images/poodle.png";
+			
+		}
+	
+		function changeColor(color) {
+			
+			document.getElementById("target").style.backgroundColor=color;
+			
+		}
+		
+		var color = ["red","yellow","pink","gray","white","orange","aqua"]
+		var idx = 0;
+		
+		function changeColors() {
+			document.getElementById("target").style.backgroundColor=color[idx++];
+			if(idx > 6) idx=0;
+		}
+		var imgNum = 1;
+		function changeImages(direct) {
+			if(direct == 1) {
+				if(imgNum >= 9) return;
+				imgNum++;
+			}
+			else {
+				if(imgNum <= 1) return;
+				imgNum--;
+			}
+			var num= "../images/pic_"+imgNum+".jpg"
+			document.getElementById("photo").src=num;
+			
+		}
+		
+	</script>
+
+
+</body>
+</html>

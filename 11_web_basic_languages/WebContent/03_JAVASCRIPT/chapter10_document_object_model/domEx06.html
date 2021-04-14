@@ -1,0 +1,88 @@
+﻿<html>
+<head>
+</head>
+<meta charset="UTF-8">
+<title>이벤트</title>
+<body>
+
+	<img src="../images/poodle.png" id="target" height="500" width="500" alt="특정 사진">
+    <br>
+    
+    <input type="text" 
+           onkeydown="kDown()"
+           onkeyup="kUp()"
+           onfocus="imgFocus()"
+           onblur="imgBlur()">    
+    
+    <input type="button" value="눌러보세요!" 
+    	   onmousedown="mDown()" 
+    	   onmouseup="mUp()">
+    
+    <img src="../images/pic_1.jpg" width="50" height="50" 
+         onmouseenter="mEnter()" 
+         onmouseleave="mLeave()">
+
+    <script>
+
+    	/*
+    	
+              onsubmit        : 폼의 입력값이 서버로 제출될 때 발생하는 이벤트
+              onload          : 웹페이지가 전부 로딩된 후에 발생하는 이벤트
+              
+		      onclick         : 엘리먼트를 클릭했을 때 발생하는 이벤트
+              onchange        : 엘리먼트의 상태가 변경되었을 때 발생하는 이벤트
+
+              onmouseenter    : 엘리먼트안으로 마우스 포인트가 옮겨왔을 때 발생하는 이벤트 
+              onmouseleave    : 엘리먼트밖으로 아무스 포인트가 옮겨갔을 때 발생하는 이벤트
+                          
+              onkeydown       : 엘리먼트에서 키보드의 키가 눌렀을 때 발생하는 이벤트
+              onkeyup         : 엘리먼트에서 키보드의 키가 올라올때 발생하는 이벤트
+                            
+              onscroll        : 스크롤바가 스크롤될 때 발생하는 이벤트
+              
+              onfocus         : 엘리먼트가 포커스를 획득했을 때 발생하는 이벤트
+              onblur          : 엘리먼트가 포커스를 잃었을 때 발생하는 이벤트
+         
+          */
+        
+          
+        function mDown() { 
+            document.getElementById("target").src = "../images/pic_1.jpg"; 
+        }
+
+
+        function mUp() { 
+            document.getElementById("target").src = "../images/pic_2.jpg";
+        }
+
+
+        function kDown(){ 
+            document.getElementById("target").src = "../images/pic_3.jpg"; 
+        }
+
+
+        function kUp(){ 
+            document.getElementById("target").src = "../images/pic_4.jpg";
+        }
+        
+        function mEnter() { 
+            document.getElementById("target").src = "../images/pic_5.jpg"; 
+        }
+
+
+        function mLeave() { 
+            document.getElementById("target").src = "../images/pic_6.jpg";
+        }
+
+
+        function imgFocus() {
+            document.getElementById("target").src = "../images/pic_7.jpg";
+        }
+
+        
+        function imgBlur() {
+            document.getElementById("target").src = "../images/pic_8.jpg";
+        }
+       
+    </script>
+</body>
