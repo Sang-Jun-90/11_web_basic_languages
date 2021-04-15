@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>새로운 노드 추가 및 삭제</title>
+</head>
+<body>
+
+	<h2>첫번째 단락</h2>
+	<div id="target1"></div>
+	<h2>두번째 단락</h2>
+	<div id="target2"></div>
+	
+	<button onclick="addElement()">추가1</button>
+	<button onclick="addText()">추가2</button>
+	<button onclick="removeText()">삭제</button>
+	
+	<script>
+		var cnt1 = 1;
+		function addElement(){
+			var addImg = document.createElement("img"); // 새로운 태그 생성
+			addImg.src="../images/pic_"+cnt1+".jpg";  // 노드의 속성추가
+			addImg.height="200";
+			addImg.width="200";
+			
+			document.getElementById("target1").appendChild(addImg)
+			
+			cnt1++;
+			
+			if(cnt1 == 10) cnt1 = 1;
+		}
+		
+		var cnt2 = 1;
+		function addText() {
+			var addP = document.createElement("p"); // html 태그 생성
+			var addSpan = document.createElement("span"); // html 태그 생성
+			var addText = document.createTextNode(cnt2+ "동적으로 텍스트가 추가됩니다."); // 텍스트 생성
+			
+			addSpan.style="color:red";
+			
+			addSpan.appendChild(addText);							// 부모의 노드를 찾아서 새로운 노드를 추가	
+			addP.appendChild(addSpan);								// 부모의 노드를 찾아서 새로운 노드를 추가
+			document.getElementById("target2").appendChild(addP);	// 부모의 노드를 찾아서 새로운 노드를 추가
+			
+			cnt2++;
+		}
+	
+		function removeText() {
+			var node = document.getElementById("target2");  // 삭제하고 싶은 노드
+			//node.removeChild(node.lastChild);  // 마지막 노드를 삭제
+			//cnt2--;
+			
+			for (var i = node.childNodes.length-1; i >= 0; i--) {
+				node.removeChild(node.childNodes[i]);
+			}
+			
+		}
+		
+	</script>
+	
+</body>
+</html>
