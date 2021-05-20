@@ -269,4 +269,18 @@ HAVING
 
 		#22) 급여가 높은 순으로 조회하되 급여가 같을 경우 이름의 알파벳이 빠른 사원순으로 사번,이름,월급여를 조회하시오.
 
+SELECT
+		EMPNO,
+        ENAME,
+        SAL
+FROM
+		EMP
+ORDER BY
+		SAL DESC ,
+        ENAME ASC;
+
+
+
+
+
 
