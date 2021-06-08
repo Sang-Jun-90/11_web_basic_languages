@@ -43,21 +43,19 @@
 	
 		function changeSearchMethod(keyword) {
 			
-			if(keyword.value== "detail"){
-				document.getElementById("category").disabled = false;
-				document.getElementById("keyword").disabled = false;
-				document.getElementById("today").disabled = false;
-				document.getElementById("1week").disabled = false;
-				document.getElementById("1month").disabled = false;
-				document.getElementById("searchButton").disabled = false;
+			if(keyword.value == 'detail'){
+				document.getElementById('category').disabled = false;
+				document.getElementById('keyword').disabled = false;
+				document.getElementById('today').disabled = false;
+				document.getElementById('1week').disabled = false;
+				document.getElementById('1month').disabled = false;
 			}
 			else {
-				document.getElementById("category").disabled = true;
-				document.getElementById("keyword").disabled = true;
-				document.getElementById("today").disabled = true;
-				document.getElementById("1week").disabled = true;
-				document.getElementById("1month").disabled = true;
-				document.getElementById("searchButton").disabled = true;
+				document.getElementById('category').disabled = true;
+				document.getElementById('keyword').disabled = true;
+				document.getElementById('today').disabled = true;
+				document.getElementById('1week').disabled = true;
+				document.getElementById('1month').disabled = true;
 			}
 			
 		}

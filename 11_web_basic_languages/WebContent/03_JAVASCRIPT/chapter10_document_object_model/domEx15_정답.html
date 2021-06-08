@@ -28,22 +28,20 @@
 	
 	<script>
 	
-	 	var isCheck=false;
+	 	var isCheck = false;
 	 	
 	 	function makeReasonBuy() {
 	 		
-	 		
 	 		if(!isCheck){
+		 		var id = document.getElementById('target');
+		 		var input = document.createElement('input')
+		 		input.type = "text";
+		 		input.size = "100";
+		 		input.placeholder = "이유를 적어주세요";
 		 		
-		 		var textbox = document.getElementById("target");
-		 		var input = document.createElement("input")
-		 		input.type="text";
-		 		input.size="100"
-		 		input.placehoder="이유를 적어주세요"
-		 		textbox.appendChild(input);
-	 			
+		 		id.appendChild(input);
 	 		}
-	 		isCheck=true;
+	 		isCheck = true;
 	 		
 	 	}
 	

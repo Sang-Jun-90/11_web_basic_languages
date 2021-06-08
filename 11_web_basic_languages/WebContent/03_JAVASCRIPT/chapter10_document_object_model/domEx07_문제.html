@@ -28,6 +28,32 @@
 		</p>
 	</fieldset>
 
+	<script>
+		function answer(){
+			
+			var value = document.getElementById('inputBrowser').value;
+			var browser = document.getElementsByName('browser');
+			
+			var bool = false;
+			
+			for (var i = 0; i < 3; i++) {
+				
+				if(value == browser[i].value){
+					document.getElementsByName('browser')[i].checked = true;	
+					bool = true;
+				}
+				document.getElementsByName('browser')[i].disabled = true;	
+			}
+			
+			if(!bool){
+				document.write('값이 존재하지 않습니다 .');
+			} 
+		}
+	
+	
+	
+	</script>
+	
 	
 </body>
 </html>

@@ -33,26 +33,27 @@
 	
 		function formValidationCheck() {
 			
-			var id = document.f.id;
-			if(id.value.length == 0){
-				alert("아이디 입력하세요.")
+			if(document.f.id.value.length == 0){
+				alert('recheck')
+				return;
 			}
-			var pw = document.f.pw;
-			if(pw.value.length == 0){
-				alert("비밀번호 입력하세요.")
+			if(document.f.pw.value.length == 0){
+				alert('recheck')
+				return;
 			}
-			var name = document.f.name;
-			if(name.value.length == 0){
-				alert("아이디를 입력하세요.")
+			if(document.f.name.value.length == 0){
+				alert('recheck')
+				return;
 			}
-			var tel = document.f.tel;
-			if(tel.value.length == 0){
-				alert("연락처를 입력하세요.")
+			if(document.f.tel.value.length == 0){
+				alert('recheck')
+				return;
 			}
-			var email = document.f.email;
-			if(email.value.length == 0){
-				alert("이메일을 입력하세요.")
+			if(document.f.email.value.length == 0){
+				alert('recheck')
+				return;
 			}
+
 			
 		}
 	

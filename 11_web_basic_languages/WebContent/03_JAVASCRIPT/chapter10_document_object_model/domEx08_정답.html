@@ -35,14 +35,12 @@
 	
 		function answer() {
 			
-			var select = document.getElementById("grade").value;
-			var grade = document.getElementById("choiceGrade");
-			var result = document.getElementById("choiceGradeLabel");
-			
-			result.innerHTML = "선택된 학년";
-			grade.value= select;
+			var grade = document.getElementById('grade');
+			var choiceGrade = document.getElementById('grade');
+			document.getElementById('choiceGradeLabel').innerHTML = '선택된 학년'
+			document.getElementById('choiceGrade').value = grade.value;
 			grade.disabled = true;
-			
+
 			
 		}
 	

@@ -34,26 +34,31 @@
 	<script>
 	
 		function checkPwdLength() {
-			var form = document.getElementsByName("f1");
-			var pwTarget = document.getElementById("target");
-			var pwd = document.getElementById("pwd");
 			
-			console.log(pwd.value.length);
-			if (pwd.value.length < 8) {
+			var pwd = document.getElementById('pwd');
+			var target = document.getElementById('target');
+			
+			var check = false;
+			
+			if(pwd.value.length < 8 && !check){
 				
-				var createP = document.createElement("p")
-				var createText = document.createElement("span")
-				createText.innerHTML = "비밀번호는 8자리 이상으로 작성하세요."
-				createText.style="color:red";
-				createP.appendChild(createText)
+				var p = document.createElement("p");
+				var span = document.createElement("span");
+				var text = document.createTextNode("비밀번호는 8자리 이상으로 작성하세요.");
 				
-				pwTarget.appendChild(createP);
+				span.style = "color:red";
+
+				p.appendChild(span);
+				span.appendChild(text);
+				document.getElementById("target").appendChild(p);
+				
+				check = true;
+				
 				
 			}
-			if (pwd.value.length >= 8) {
-				
-				pwTarget.removeChild(pwTarget.lastChild);
-				
+			if(pwd.value.length >= 8 && check) {
+				target.removeChild(p);
+				check = false;
 			}
 			
 			

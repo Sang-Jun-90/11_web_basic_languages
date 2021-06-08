@@ -5,45 +5,46 @@
 <title>Insert title here</title>
 <body>
  	
- 	<form>
+ 	<form action="#" method="post">
  		<fieldset>
- 			<legend>회원가입화면</legend>
- 			<p><label>이름 : <input type="text" name="name"></label></p>
- 			<p><label>아이디 : <input type="text" name="id"></label></p>
- 			<p><label>비밀번호 : <input type="password" name="pw"></label></p>
- 			<p>
- 				<input type="radio" name="sex" value="male">남
- 				<input type="radio" name="sex" value="female">여
- 			</p>
- 			<p>
- 			 	<label>사는지역
- 					<select>
- 						<option name="city" value="seoul">서울특별시</option>
- 						<option name="city" value="busan">부산</option>
- 						<option name="city" value="jeju">제주도</option>
- 					</select>
- 				</label>
+ 			<legend>회원 가입 화면 </legend>
+ 			<div><label>이름 : <input type="text" name="name"></label><br></div>
+ 			<div><label>아이디 : <input type="text" name="id"></label>(아이디는 12자 이내로 입력하세요<input type="button" value="아이디중복확인 ">)<br></div>
+ 			<div><label>비밀번호 : <input type="password" name="passwd"></label><br></div>
+ 			<div><input type="radio" name = "sex" value="male">남 
+ 			<input type="radio" name = "sex" value= "female">여 <br></div>
+ 			<div><label>사는지역 : 
+	 			<select>
+	 				<option name = "city" value="s">서울특별시 </option>
+	 				<option name = "city" value="b">부산 </option>
+	 			</select><br>
+ 			</label>
+ 			</div>
+ 			<div>
+	 			이메일주소
+	 			<input type="text">
+	 			@
+	 			<input type="text">
+	 			(이메일 수신허용
+	 			<input type="radio" name = "emailCheck" selected>허용 
+	 			<input type="radio" name = "emailCheck">거부 
+	 			)
  			
- 			</p>
- 			<p></p>
- 			<p>
- 				<label>직업
- 					<select>
- 						<option name="job" value="student">학생</option>
- 						<option name="job" value="salaryman">직장인</option>
- 						<option name="job" value="the old">노인</option>
- 					</select>
- 				</label>
+ 			</div>
  			
- 			</p>
- 			<p>자기소개</p>
- 			<p>
-				<textarea rows="10" cols="40" name="myself"></textarea>
-			</p>
- 			<p>
- 				<input type="submit" value="제출">
- 				<input type="reset"  value="취소">
- 			</p>
+ 			
+ 			 <div><label>직업  : 
+	 			<select>
+	 				<option name = "job" value="sty">학생  </option>
+	 				<option name = "job" value="bus">직장인  </option>
+	 			</select><br>
+ 			</label></div>
+ 			<div>자기소개<textarea rows="5" cols="15"> </textarea>
+ 			</div>
+ 			<div>
+ 				<input type="submit" value = "제출">
+ 				<input type="reset" value = "취소">
+ 			</div>
  		</fieldset>
  	</form>
  	

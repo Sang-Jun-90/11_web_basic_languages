@@ -29,21 +29,21 @@
 	<script>
 	
 		function answer() {
-			
-			var subject= document.getElementsByName("subjects");
-			var result= document.getElementById("result");
-			var num = 1;
-			var text = "선택 : ";
-			
-			for (var i = 0; i < subject.length; i++) {
-				if (subject[i].checked){
-					text += num + ")" + subject[i].value + " ";
-					num++;
+				
+			var value = "";
+
+			var subjects = document.getElementsByName("subjects");
+
+			for (var i = 0; i < 3; i++) {
+				if (subjects[i].checked == true){
+					value += subjects[i].value;
+					value += "   ";
 				}
 			}
-			
-			console.log(text);
-			result.innerHTML = text;
+
+			console.log(value);
+			document.getElementById('result').innerHTML = value; 
+ 			
 		}
 	
 	</script>
