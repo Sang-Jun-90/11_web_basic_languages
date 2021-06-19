@@ -1,23 +1,7 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <faceted-project>
   <runtime name="Apache Tomcat v8.5"/>
-  <fixed facet="jst.web"/>
-  <fixed facet="java"/>
-  <fixed facet="wst.jsdt.web"/>
-  <installed facet="java" version="1.8"/>
   <installed facet="wst.jsdt.web" version="1.0"/>
+  <installed facet="java" version="1.8"/>
   <installed facet="jst.web" version="3.1"/>
 </faceted-project>
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<faceted-project>
-  <runtime name="Apache Tomcat v8.5"/>
-  <fixed facet="jst.web"/>
-  <fixed facet="java"/>
-  <fixed facet="wst.jsdt.web"/>
-  <installed facet="java" version="1.8"/>
-  <installed facet="jst.web" version="3.0"/>
-  <installed facet="wst.jsdt.web" version="1.0"/>
-</faceted-project>
->>>>>>> branch 'master' of https://github.com/Sang-Jun-90/11_web_basic_languages
